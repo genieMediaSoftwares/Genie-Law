@@ -1,0 +1,140 @@
+{
+  "items": {
+    "criminal_law": {
+      "title": "Criminal Law"
+    },
+    "family_divorce": {
+      "title": "Family & Divorce"
+    },
+    "property_land": {
+      "title": "Property & Land"
+    },
+    "civil_cases": {
+      "title": "Civil Cases"
+    },
+    "cyber_crime": {
+      "title": "Cyber Crime"
+    },
+    "gst_taxation": {
+      "title": "GST & Taxation"
+    },
+    "employment_labour": {
+      "title": "Employment & Labour"
+    },
+    "consumer_complaints": {
+      "title": "Consumer Complaints"
+    },
+    "banking_financial": {
+      "title": "Banking & Financial"
+    },
+    "business_corporate": {
+      "title": "Business & Corporate"
+    },
+    "documentation": {
+      "title": "Documentation"
+    },
+    "motor_accident_claims": {
+      "title": "Motor Accident Claims"
+    },
+    "medical_negligence": {
+      "title": "Medical Negligence"
+    },
+    "education_law": {
+      "title": "Education Law"
+    },
+    "immigration_visa": {
+      "title": "Immigration & Visa"
+    }
+  },
+  "subTypes": {
+    "fir_registration": "FIR Registration",
+    "bail": "Bail",
+    "theft": "Theft",
+    "assault": "Assault",
+    "cheating_and_fraud": "Cheating & Fraud",
+    "divorce": "Divorce",
+    "child_custody": "Child Custody",
+    "domestic_violence": "Domestic Violence",
+    "maintenance_alimony": "Maintenance / Alimony",
+    "marriage_registration": "Marriage Registration",
+    "property_registration": "Property Registration",
+    "builder_dispute": "Builder Dispute",
+    "property_partition": "Property Partition",
+    "land_encroachment": "Land Encroachment",
+    "rera_complaint": "RERA Complaint",
+    "money_recovery": "Money Recovery",
+    "civil_suit": "Civil Suit",
+    "property_injunction": "Property Injunction",
+    "contract_dispute": "Contract Dispute",
+    "recovery_of_possession": "Recovery of Possession",
+    "online_scam": "Online Scam",
+    "upi_fraud": "UPI Fraud",
+    "social_media_harassment": "Social Media Harassment",
+    "identity_theft": "Identity Theft",
+    "hacking": "Hacking",
+    "gst_registration": "GST Registration",
+    "gst_notice": "GST Notice",
+    "income_tax_notice": "Income Tax Notice",
+    "tax_filing": "Tax Filing",
+    "tax_consultation": "Tax Consultation",
+    "salary_issues": "Salary Issues",
+    "wrongful_termination": "Wrongful Termination",
+    "workplace_harassment": "Workplace Harassment",
+    "labour_dispute": "Labour Dispute",
+    "employment_contract": "Employment Contract",
+    "refund_issue": "Refund Issue",
+    "defective_product": "Defective Product",
+    "online_shopping_fraud": "Online Shopping Fraud",
+    "service_complaint": "Service Complaint",
+    "warranty_claim": "Warranty Claim",
+    "loan_dispute": "Loan Dispute",
+    "bank_fraud": "Bank Fraud",
+    "credit_card_dispute": "Credit Card Dispute",
+    "emi_issues": "EMI Issues",
+    "cheque_bounce": "Cheque Bounce",
+    "company_registration": "Company Registration",
+    "partnership_dispute": "Partnership Dispute",
+    "contract_review": "Contract Review",
+    "trademark": "Trademark",
+    "startup_legal_help": "Startup Legal Help",
+    "legal_notice": "Legal Notice",
+    "rental_agreement": "Rental Agreement",
+    "affidavit": "Affidavit",
+    "power_of_attorney": "Power of Attorney",
+    "will_preparation": "Will Preparation",
+    "accident_compensation": "Accident Compensation",
+    "insurance_claim": "Insurance Claim",
+    "vehicle_damage": "Vehicle Damage",
+    "hit_and_run": "Hit & Run",
+    "injury_claim": "Injury Claim",
+    "doctor_negligence": "Doctor Negligence",
+    "hospital_liability": "Hospital Liability",
+    "wrong_diagnosis": "Wrong Diagnosis",
+    "surgical_error": "Surgical Error",
+    "treatment_delay": "Treatment Delay",
+    "admission_dispute": "Admission Dispute",
+    "fee_dispute": "Fee Dispute",
+    "degree_delay": "Degree Delay",
+    "harassment_case": "Harassment Case",
+    "exam_malpractice": "Exam Malpractice",
+    "student_visa": "Student Visa",
+    "work_permit": "Work Permit",
+    "pr_application": "PR Application",
+    "citizenship": "Citizenship",
+    "deportation_case": "Deportation Case"
+  },
+  "practiceAreas": {
+    "general_practice": "General Practice",
+    "corporate_law": "Corporate Law",
+    "tax_law": "Tax Law",
+    "labour_law": "Labour Law",
+    "intellectual_property": "Intellectual Property",
+    "constitutional_law": "Constitutional Law",
+    "consumer_law": "Consumer Law",
+    "criminal_defense": "Criminal Defense",
+    "civil_law": "Civil Law",
+    "family_law": "Family Law",
+    "property_law": "Property Law",
+    "cyber_law": "Cyber Law"
+  }
+}

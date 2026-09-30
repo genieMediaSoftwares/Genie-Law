@@ -1,0 +1,125 @@
+# Render Blueprint for the Genie Law backend (Node.js web service).
+#
+# Values marked `sync: false` are entered in the Render dashboard when the
+# Blueprint is applied (or later under the service's Environment tab); they are
+# never stored in this file or in Git. Render provides PORT itself.
+# For a staging service, apply the Blueprint again under another name and give
+# it its own MONGODB_URI, R2 bucket/token and secrets.
+
+services:
+  - type: web
+    name: genielaw-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Render's load balancer is one proxy hop in front of the server.
+      - key: TRUST_PROXY
+        value: "1"
+      - key: ALLOWED_ORIGINS
+        sync: false
+
+      # MongoDB Atlas
+      - key: MONGODB_URI
+        sync: false
+
+      # Cloudflare R2 (FILE_STORAGE=local is development only and refused here)
+      - key: FILE_STORAGE
+        value: r2
+      - key: R2_ENDPOINT
+        sync: false
+      - key: R2_ACCESS_KEY_ID
+        sync: false
+      - key: R2_SECRET_ACCESS_KEY
+        sync: false
+      - key: R2_BUCKET_NAME
+        sync: false
+
+      # Auth
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRES_IN
+        sync: false
+      - key: JWT_REFRESH_EXPIRES_IN
+        sync: false
+      - key: ENCRYPTION_SECRET
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_MOBILE
+        sync: false
+      - key: SUPPORT_EMAIL
+        sync: false
+
+      # AI (Gemini)
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL_PRIMARY
+        sync: false
+      - key: GEMINI_MODEL_FALLBACK
+        sync: false
+      - key: AI_UPLOAD_MAX_MB
+        sync: false
+      - key: AI_OPTIMIZE_MAX_MB
+        sync: false
+      - key: AI_RELEVANCE_THRESHOLD
+        sync: false
+      - key: LEGAL_SEARCH_PROVIDER
+        sync: false
+      - key: AI_RELEVANCE_TIMEOUT_MS
+        sync: false
+      - key: AI_EXTRACTION_TIMEOUT_MS
+        sync: false
+      - key: AI_TRANSCRIPTION_TIMEOUT_MS
+        sync: false
+      - key: AI_OCR_TIMEOUT_MS
+        sync: false
+      - key: AI_RESEARCH_TIMEOUT_MS
+        sync: false
+      - key: AI_CHAT_TIMEOUT_MS
+        sync: false
+      - key: AI_PDF_OPTIMIZE_TIMEOUT_MS
+        sync: false
+      - key: GHOSTSCRIPT_PATH
+        sync: false
+
+      # Google (optional features: leave empty to switch off)
+      - key: GOOGLE_PLACES_API_KEY
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_REDIRECT_URI
+        sync: false
+      - key: GOOGLE_AUTH_REDIRECT_URI
+        sync: false
+      - key: APP_AUTH_REDIRECT_URIS
+        sync: false
+
+      # Payments
+      - key: PAYMENTS_ENABLED
+        sync: false
+      - key: PAYMENT_GATEWAY
+        sync: false
+
+      # Contact verification (OTP)
+      - key: OTP_SECRET
+        sync: false
+      - key: OTP_TTL_SECONDS
+        sync: false
+      - key: OTP_MAX_ATTEMPTS
+        sync: false
+      - key: OTP_RESEND_COOLDOWN_SECONDS
+        sync: false
+      - key: OTP_MAX_SENDS_PER_HOUR
+        sync: false
+      - key: OTP_DELIVERY
+        sync: false

@@ -1,0 +1,66 @@
+{
+  "groups": {
+    "preferences": "PREFERENCES",
+    "supportLegal": "SUPPORT & LEGAL",
+    "account": "ACCOUNT"
+  },
+  "pushNotifications": "Push Notifications",
+  "appTheme": "App Theme",
+  "themeBlackDefault": "Black (Default)",
+  "language": {
+    "title": "Language",
+    "subtitle": "Choose the language for the app. You can change it any time."
+  },
+  "aboutGenieLaw": "About GenieLaw",
+  "privacyPolicy": "Privacy Policy",
+  "termsConditions": "Terms & Conditions",
+  "changePassword": "Change Password",
+  "deleteAccount": {
+    "title": "Delete Account",
+    "confirm": "Permanently Delete",
+    "deleting": "Deleting...",
+    "warning": "Warning: This action is permanent and cannot be undone. All your case history, documents, and messages will be permanently removed.",
+    "passwordLabel": "Enter Password to Confirm",
+    "passwordPlaceholder": "Your password",
+    "passwordRequired": "Please enter your password to confirm account deletion.",
+    "failed": "Failed to delete account. Please verify password."
+  },
+  "support": {
+    "call": "Call Support",
+    "email": "Email Support",
+    "noCallingApp": "No calling app is available. Please call {{phone}}.",
+    "noEmailApp": "No email app is available. Please write to {{email}}."
+  },
+  "password": {
+    "currentRequired": "Please enter your current password.",
+    "tooShort": "New password must be at least 6 characters long.",
+    "mismatch": "New password and confirm password do not match.",
+    "updated": "Password updated successfully!",
+    "failed": "Failed to change password. Please verify current password.",
+    "title": "Change Password",
+    "heading": "Security Credentials",
+    "current": "Current Password",
+    "currentPlaceholder": "Enter current password",
+    "new": "New Password",
+    "newPlaceholder": "Minimum 6 characters",
+    "confirm": "Confirm New Password",
+    "confirmPlaceholder": "Re-enter new password",
+    "update": "Update Password",
+    "updating": "Updating Password..."
+  },
+  "about": {
+    "title": "About GenieLaw",
+    "tagline": "AI-Powered Legal Marketplace & Case Assistant",
+    "version": "Version {{version}}",
+    "mission": "OUR MISSION",
+    "missionText": "GenieLaw is dedicated to democratizing legal assistance by connecting clients directly with top verified advocates and empowering both parties with cutting-edge AI legal analysis tools.",
+    "features": "KEY FEATURES",
+    "feature1": "AI Smart Case Assistant for document summary and legal drafting",
+    "feature2": "Direct advocate search, rating reviews, and consultation booking",
+    "feature3": "Secure encrypted document repository and message encryption",
+    "feature4": "Real-time notifications for hearing dates and case updates",
+    "contactSupport": "CONTACT SUPPORT"
+  },
+  "termsEmpty": "The terms have not been published yet. They will appear here once available.",
+  "privacyEmpty": "The privacy policy has not been published yet. It will appear here once available."
+}

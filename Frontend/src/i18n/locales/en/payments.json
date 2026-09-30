@@ -1,0 +1,101 @@
+{
+  "noGateway": "No payment gateway is connected in the app yet.",
+  "state": {
+    "FREE": {
+      "title": "Currently Free",
+      "message": "Payment features will be available soon. Everything is free for now."
+    },
+    "COMING_SOON": {
+      "title": "Coming Soon",
+      "message": "This will be available when payments launch."
+    },
+    "PAYMENT_REQUIRED": {
+      "title": "Payment Required",
+      "message": "Complete payment to continue."
+    },
+    "CHECKOUT": {
+      "title": "Awaiting Payment",
+      "message": "This payment has not been completed yet."
+    },
+    "PROCESSING": {
+      "title": "Processing",
+      "message": "We are confirming this payment."
+    },
+    "SUCCESS": {
+      "title": "Payment Successful",
+      "message": "This payment was confirmed."
+    },
+    "FAILED": {
+      "title": "Payment Failed",
+      "message": "This payment did not go through."
+    },
+    "CANCELLED": {
+      "title": "Payment Cancelled",
+      "message": "This payment was cancelled."
+    },
+    "REFUNDED": {
+      "title": "Refunded",
+      "message": "This payment was refunded."
+    },
+    "EXPIRED": {
+      "title": "Payment Expired",
+      "message": "This payment request expired."
+    }
+  },
+  "history": {
+    "tabs": {
+      "all": "All",
+      "completed": "Completed",
+      "pending": "Pending",
+      "refunded": "Refunded"
+    },
+    "advocate": "Advocate",
+    "subscription": "Subscription",
+    "consultation": "Consultation",
+    "appointment": " · Appointment",
+    "case": " · Case",
+    "title": "Payments",
+    "loadFailed": "Failed to load payments",
+    "empty": "No payments yet",
+    "emptyFree": "Genie Law is currently free, so there is nothing to pay. Your payments will appear here once payment features launch.",
+    "emptyHint": "Your payments will appear here."
+  },
+  "interval": {
+    "month": "month",
+    "monthly": "month",
+    "year": "year",
+    "yearly": "year",
+    "week": "week",
+    "day": "day"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "unavailable": "Checkout unavailable",
+    "planGone": "This plan is no longer offered.",
+    "selectedPlan": "Selected plan",
+    "pricePer": "{{price}} / {{interval}}",
+    "pay": "Pay {{amount}}",
+    "back": "Back"
+  },
+  "details": {
+    "title": "Payment Details",
+    "unavailable": "Payment unavailable",
+    "notFound": "Payment not found.",
+    "amount": "Amount",
+    "purpose": "Purpose",
+    "subscription": "Subscription",
+    "subscriptionPlan": "Subscription · {{plan}}",
+    "consultation": "Consultation",
+    "advocate": "Advocate",
+    "client": "Client",
+    "method": "Method",
+    "gateway": "Gateway",
+    "gatewayOrder": "Gateway order",
+    "gatewayPayment": "Gateway payment",
+    "created": "Created",
+    "updated": "Last updated",
+    "failureReason": "Failure reason",
+    "receipt": "Receipt",
+    "receiptSoon": "Downloadable receipts will be available when payments launch."
+  }
+}

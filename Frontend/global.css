@@ -1,0 +1,15 @@
+/**
+ * The stylesheet NativeWind compiles.
+ *
+ * On native, Metro runs this through Tailwind and hands the result to
+ * react-native-css-interop, which turns the classes into real RN styles — no
+ * CSS reaches the device. In the browser the same file is a normal stylesheet
+ * that PostCSS builds and Vite injects.
+ *
+ * Imported once per entry point: `index.js` for native, `web/main.tsx` for the
+ * browser.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

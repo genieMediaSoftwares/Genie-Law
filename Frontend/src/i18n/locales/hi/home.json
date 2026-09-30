@@ -1,0 +1,36 @@
+{
+  "howItWorks": {
+    "selectIssue": "समस्या चुनें",
+    "selectIssueDescription": "अपनी कानूनी समस्या की श्रेणी चुनें।",
+    "caseDetails": "केस विवरण",
+    "caseDetailsDescription": "अपनी समस्या का विवरण, स्थान, पसंदीदा अदालत और तात्कालिकता जोड़ें।",
+    "uploadDocument": "दस्तावेज़ अपलोड करें",
+    "uploadDocumentDescription": "अपनी पावती या सहायक दस्तावेज़ अपलोड करें।",
+    "recommendedLawyer": "सुझाए गए वकील",
+    "recommendedLawyerDescription": "AI आपकी समस्या के प्रकार और स्थान के आधार पर वकीलों का सुझाव देता है।",
+    "review": "समीक्षा",
+    "reviewDescription": "सभी विवरण जाँचें और अपना केस जमा करें।",
+    "stepA11y": "चरण {{step}} / {{total}}: {{title}}. {{description}}"
+  },
+  "hero": {
+    "slide1": "आपकी कानूनी यात्रा",
+    "slide2": "असली लोग। असली वकील।",
+    "slide3": "जो ज़रूरी है उस पर ध्यान दें।",
+    "slideA11y": "स्लाइड {{id}}"
+  },
+  "welcomeBack": "फिर से स्वागत है",
+  "helloName": "नमस्ते, {{name}}",
+  "hello": "नमस्ते",
+  "howCanWeHelp": "आज हम आपके कानूनी मामले में कैसे मदद कर सकते हैं?",
+  "aiPowered": "AI संचालित",
+  "smartAssistant": "AI स्मार्ट केस सहायक",
+  "smartAssistantDescription": "अपना कानूनी केस कैसे पोस्ट करें, नहीं पता? दस्तावेज़ अपलोड करें या वॉइस नोट रिकॉर्ड करें, AI आपके लिए सब कुछ भर देगा।",
+  "getStarted": "शुरू करें",
+  "categories": "श्रेणियाँ",
+  "viewAll": "सभी देखें",
+  "legalAssistant": "AI कानूनी सहायक",
+  "legalAssistantDescription": "अपने कानूनी सवालों के तुरंत जवाब पाएँ।",
+  "askNow": "अभी पूछें",
+  "howItWorksTitle": "यह कैसे काम करता है",
+  "howItWorksTagline": "सरल। सुरक्षित। प्रभावी।"
+}

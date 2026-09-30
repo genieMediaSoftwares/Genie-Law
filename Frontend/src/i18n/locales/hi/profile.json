@@ -1,0 +1,59 @@
+{
+  "title": "प्रोफ़ाइल",
+  "menu": {
+    "myProfile": "मेरी प्रोफ़ाइल",
+    "myProfileSub": "अपने खाते का सारांश और विवरण देखें",
+    "personalInfo": "व्यक्तिगत जानकारी",
+    "personalInfoSub": "जन्म तिथि, लिंग, भाषाएँ, फ़ोन और स्थान",
+    "appointments": "अपॉइंटमेंट",
+    "appointmentsSub": "वकीलों के साथ आपके परामर्श",
+    "documents": "मेरे दस्तावेज़",
+    "documentsSub": "अपलोड की गई कानूनी फ़ाइलें प्रबंधित करें",
+    "activity": "हाल की गतिविधि",
+    "activitySub": "केस और खाता गतिविधि लॉग देखें",
+    "settings": "सेटिंग्स",
+    "settingsSub": "सुरक्षा, प्राथमिकताएँ, कानूनी और खाता"
+  },
+  "detail": {
+    "uploadError": "अपलोड त्रुटि",
+    "uploadFailed": "प्रोफ़ाइल फ़ोटो अपलोड नहीं हो सकी",
+    "pickerFailed": "फ़ोटो चुनने वाला नहीं खुल सका",
+    "title": "मेरी प्रोफ़ाइल",
+    "changePhoto": "प्रोफ़ाइल फ़ोटो बदलें",
+    "accountSummary": "खाता सारांश",
+    "fullName": "पूरा नाम",
+    "email": "ईमेल पता",
+    "phone": "फ़ोन नंबर",
+    "location": "स्थान",
+    "notSet": "सेट नहीं है",
+    "edit": "प्रोफ़ाइल विवरण संपादित करें"
+  },
+  "personal": {
+    "nameRequired": "पूरा नाम आवश्यक है",
+    "updateFailed": "व्यक्तिगत जानकारी अपडेट नहीं हो सकी",
+    "title": "व्यक्तिगत जानकारी",
+    "updated": "जानकारी सफलतापूर्वक अपडेट हो गई!",
+    "editHeading": "व्यक्तिगत विवरण संपादित करें",
+    "fullName": "पूरा नाम",
+    "fullNamePlaceholder": "जैसे राहुल शर्मा",
+    "phone": "फ़ोन / मोबाइल नंबर",
+    "phonePlaceholder": "जैसे +91 9876543210",
+    "location": "शहर / स्थान",
+    "locationPlaceholder": "जैसे मुंबई, भारत",
+    "dob": "जन्म तिथि",
+    "dobPlaceholder": "YYYY-MM-DD",
+    "gender": "लिंग",
+    "genderPlaceholder": "जैसे पुरुष / महिला / अन्य",
+    "languages": "बोली जाने वाली भाषाएँ",
+    "languagesPlaceholder": "जैसे English, Hindi, Marathi",
+    "languagesHelper": "कई भाषाओं को अल्पविराम से अलग करें",
+    "save": "बदलाव सहेजें",
+    "saving": "बदलाव सहेजे जा रहे हैं..."
+  },
+  "activity": {
+    "title": "हाल की गतिविधि",
+    "fallbackTitle": "खाता गतिविधि",
+    "empty": "कोई हाल की गतिविधि नहीं",
+    "emptyHint": "आपके खाते की गतिविधि, केस अपडेट और लॉगिन रिकॉर्ड यहाँ दिखाई देंगे।"
+  }
+}

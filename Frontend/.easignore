@@ -1,0 +1,3 @@
+# Expo Prebuild / EAS ignore for native build directories
+android/
+ios/

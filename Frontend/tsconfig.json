@@ -1,0 +1,30 @@
+{
+  "extends": "@react-native/typescript-config",
+  // Jest globals belong to the test programme (tsconfig.test.json) only.
+  "compilerOptions": {
+    "types": []
+  },
+  // The native programme. The React Native base config deliberately omits the
+  // DOM lib, so that a screen cannot reach for `window` or `document` and have
+  // it type-check when no such thing exists on a device. That guarantee is
+  // worth keeping, so the browser-only sources are checked separately by
+  // tsconfig.web.json rather than by widening `lib` for everything.
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "nativewind-env.d.ts"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/Pods",
+    "dist",
+    "web",
+    "**/*.web.ts",
+    "**/*.web.tsx",
+    "vite.config.mts",
+    "**/__tests__/**",
+    "src/test-utils/**",
+    "jest/**",
+    "jest.config.js"
+  ]
+}

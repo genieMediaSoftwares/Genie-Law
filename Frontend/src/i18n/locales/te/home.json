@@ -1,0 +1,36 @@
+{
+  "howItWorks": {
+    "selectIssue": "సమస్యను ఎంచుకోండి",
+    "selectIssueDescription": "మీ చట్టపరమైన సమస్య వర్గాన్ని ఎంచుకోండి.",
+    "caseDetails": "కేసు వివరాలు",
+    "caseDetailsDescription": "మీ సమస్య వివరణ, ప్రదేశం, కోర్టు ప్రాధాన్యత మరియు అత్యవసరతను జోడించండి.",
+    "uploadDocument": "పత్రాన్ని అప్‌లోడ్ చేయండి",
+    "uploadDocumentDescription": "మీ రసీదు లేదా సహాయక పత్రాన్ని అప్‌లోడ్ చేయండి.",
+    "recommendedLawyer": "సిఫార్సు చేసిన న్యాయవాది",
+    "recommendedLawyerDescription": "మీ సమస్య రకం మరియు ప్రదేశం ఆధారంగా AI న్యాయవాదులను సిఫార్సు చేస్తుంది.",
+    "review": "సమీక్ష",
+    "reviewDescription": "అన్ని వివరాలను తనిఖీ చేసి మీ కేసును సమర్పించండి.",
+    "stepA11y": "దశ {{step}} / {{total}}: {{title}}. {{description}}"
+  },
+  "hero": {
+    "slide1": "మీ న్యాయ ప్రయాణం",
+    "slide2": "నిజమైన వ్యక్తులు. నిజమైన న్యాయవాదులు.",
+    "slide3": "ముఖ్యమైన వాటిపై దృష్టి పెట్టండి.",
+    "slideA11y": "స్లయిడ్ {{id}}"
+  },
+  "welcomeBack": "తిరిగి స్వాగతం",
+  "helloName": "నమస్తే, {{name}}",
+  "hello": "నమస్తే",
+  "howCanWeHelp": "ఈరోజు మీ చట్టపరమైన విషయంలో మేము ఎలా సహాయం చేయగలం?",
+  "aiPowered": "AI ఆధారిత",
+  "smartAssistant": "AI స్మార్ట్ కేసు సహాయకుడు",
+  "smartAssistantDescription": "మీ కేసును ఎలా పోస్ట్ చేయాలో తెలియదా? పత్రాలను అప్‌లోడ్ చేయండి లేదా వాయిస్ నోట్ రికార్డ్ చేయండి, AI మీ కోసం అన్నీ నింపుతుంది.",
+  "getStarted": "ప్రారంభించండి",
+  "categories": "వర్గాలు",
+  "viewAll": "అన్నీ చూడండి",
+  "legalAssistant": "AI న్యాయ సహాయకుడు",
+  "legalAssistantDescription": "మీ చట్టపరమైన ప్రశ్నలకు తక్షణ సమాధానాలు పొందండి.",
+  "askNow": "ఇప్పుడే అడగండి",
+  "howItWorksTitle": "ఇది ఎలా పని చేస్తుంది",
+  "howItWorksTagline": "సులభం. సురక్షితం. ప్రభావవంతం."
+}

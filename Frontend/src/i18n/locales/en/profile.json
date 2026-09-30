@@ -1,0 +1,59 @@
+{
+  "title": "Profile",
+  "menu": {
+    "myProfile": "My Profile",
+    "myProfileSub": "View your account summary & details",
+    "personalInfo": "Personal Information",
+    "personalInfoSub": "DOB, Gender, Languages, Phone & Location",
+    "appointments": "Appointments",
+    "appointmentsSub": "Your consultations with advocates",
+    "documents": "My Documents",
+    "documentsSub": "Manage uploaded legal files",
+    "activity": "Recent Activity",
+    "activitySub": "View case and account activity log",
+    "settings": "Settings",
+    "settingsSub": "Security, preferences, legal & account"
+  },
+  "detail": {
+    "uploadError": "Upload Error",
+    "uploadFailed": "Failed to upload profile photo",
+    "pickerFailed": "Could not open the photo picker",
+    "title": "My Profile",
+    "changePhoto": "Change profile photo",
+    "accountSummary": "Account Summary",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "location": "Location",
+    "notSet": "Not set",
+    "edit": "Edit Profile Details"
+  },
+  "personal": {
+    "nameRequired": "Full Name is required",
+    "updateFailed": "Failed to update personal information",
+    "title": "Personal Information",
+    "updated": "Information updated successfully!",
+    "editHeading": "Edit Personal Details",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "e.g. John Doe",
+    "phone": "Phone / Mobile Number",
+    "phonePlaceholder": "e.g. +91 9876543210",
+    "location": "City / Location",
+    "locationPlaceholder": "e.g. Mumbai, India",
+    "dob": "Date of Birth",
+    "dobPlaceholder": "YYYY-MM-DD",
+    "gender": "Gender",
+    "genderPlaceholder": "e.g. Male / Female / Other",
+    "languages": "Languages Spoken",
+    "languagesPlaceholder": "e.g. English, Hindi, Marathi",
+    "languagesHelper": "Separate multiple languages with commas",
+    "save": "Save Changes",
+    "saving": "Saving Changes..."
+  },
+  "activity": {
+    "title": "Recent Activity",
+    "fallbackTitle": "Account Activity",
+    "empty": "No Recent Activity",
+    "emptyHint": "Your account activity history, case updates, and login logs will appear here."
+  }
+}

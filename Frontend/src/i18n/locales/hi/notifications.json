@@ -1,0 +1,31 @@
+{
+  "card": {
+    "dismissA11y": "सूचना हटाएँ",
+    "unreadA11y": "अपठित",
+    "markRead": "पढ़ा गया चिह्नित करें",
+    "delete": "हटाएँ"
+  },
+  "tabs": {
+    "all": "सभी",
+    "cases": "केस",
+    "messages": "संदेश",
+    "documents": "दस्तावेज़",
+    "updates": "अपडेट"
+  },
+  "screen": {
+    "loadingMore": "और लोड हो रहा है…",
+    "caughtUp": "आपने सब देख लिया है!",
+    "caughtUpHint": "कुछ नया होने पर हम आपको सूचित करेंगे।",
+    "title": "सूचनाएँ",
+    "done": "हो गया",
+    "select": "चुनें",
+    "marking": "चिह्नित हो रहा है…",
+    "markAllRead": "सभी को पढ़ा गया चिह्नित करें",
+    "deselectAll": "सभी का चयन हटाएँ",
+    "selectAll": "सभी चुनें",
+    "selectedCount": "{{count}} चयनित",
+    "clearAll": "सभी साफ़ करें",
+    "markReadCount": "पढ़ा गया ({{count}})",
+    "deleteCount": "हटाएँ ({{count}})"
+  }
+}

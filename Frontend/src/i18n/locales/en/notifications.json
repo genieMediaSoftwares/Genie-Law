@@ -1,0 +1,31 @@
+{
+  "card": {
+    "dismissA11y": "Push alert away",
+    "unreadA11y": "Unread",
+    "markRead": "Mark Read",
+    "delete": "Delete"
+  },
+  "tabs": {
+    "all": "All",
+    "cases": "Cases",
+    "messages": "Messages",
+    "documents": "Documents",
+    "updates": "Updates"
+  },
+  "screen": {
+    "loadingMore": "Loading more…",
+    "caughtUp": "You're all caught up!",
+    "caughtUpHint": "We'll notify you when there's something new.",
+    "title": "Notifications",
+    "done": "Done",
+    "select": "Select",
+    "marking": "Marking…",
+    "markAllRead": "Mark all read",
+    "deselectAll": "Deselect All",
+    "selectAll": "Select All",
+    "selectedCount": "{{count}} selected",
+    "clearAll": "Clear All",
+    "markReadCount": "Mark Read ({{count}})",
+    "deleteCount": "Delete ({{count}})"
+  }
+}

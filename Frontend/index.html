@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#080808" />
+    <title>Genie Law</title>
+    <style>
+      /* Black from the first paint, so the page never flashes white before
+         React mounts — the same reason the Android theme sets
+         android:windowBackground. */
+      html,
+      body,
+      #root {
+        /* Both axes must be pinned. With height alone, react-native-web's
+           outermost flex container sizes to its content on the cross axis and
+           the whole app lays out wider than the window — the Sign Up tab and
+           the right edge of every input end up off-screen behind a horizontal
+           scrollbar. */
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #080808;
+        /* A React Native screen scrolls internally. The document itself never
+           should, or the fixed header scrolls away with it. */
+        overflow: hidden;
+      }
+
+      /* react-native-web maps every <Text> onto a DOM node; without this the
+         browser's default serif and text selection show through. */
+      body {
+        -webkit-font-smoothing: antialiased;
+        overscroll-behavior: none;
+      }
+
+      #root {
+        /* React Native's root is a column flex container; this is the DOM
+           equivalent, and it is what lets `flex: 1` on a screen fill the
+           window rather than collapse to zero height. */
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/web/main.tsx"></script>
+  </body>
+</html>

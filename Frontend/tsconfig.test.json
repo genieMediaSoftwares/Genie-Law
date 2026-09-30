@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "jest",
+      "node"
+    ]
+  },
+  "include": [
+    "**/__tests__/**/*.ts",
+    "**/__tests__/**/*.tsx",
+    "src/test-utils/**/*.ts",
+    "jest/**/*.ts",
+    "nativewind-env.d.ts",
+    "src/types/*.d.ts"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "dist",
+    "web"
+  ]
+}

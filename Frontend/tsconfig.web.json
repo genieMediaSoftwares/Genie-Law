@@ -1,0 +1,35 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Only this programme gets the DOM. `src/services/secureStorage.web.ts`
+    // and `web/main.tsx` are the browser half of the app, and they are the
+    // only files permitted to know that a window exists.
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "types": []
+  },
+  // web/main.tsx imports App, so this programme transitively pulls in the
+  // whole of src/. The ambient declarations have to come with it — without
+  // src/types, the `@env` module that src/config/env.ts imports has no
+  // declaration and the web check fails on a module the native check resolves
+  // fine.
+  "include": [
+    // NativeWind augments the React Native component props with `className`.
+    // The native programme picks this up from its own `**/*.ts` glob; the web
+    // programme has an explicit file list, so it has to be named here too.
+    "nativewind-env.d.ts",
+    "web/**/*.ts",
+    "web/**/*.tsx",
+    "src/**/*.web.ts",
+    "src/**/*.web.tsx",
+    "src/types/**/*.d.ts",
+    "vite.config.mts"
+  ],
+  "exclude": ["**/node_modules", "dist"]
+}

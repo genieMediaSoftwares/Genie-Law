@@ -1,0 +1,36 @@
+{
+  "howItWorks": {
+    "selectIssue": "Select Issue",
+    "selectIssueDescription": "Choose your legal issue category.",
+    "caseDetails": "Case Details",
+    "caseDetailsDescription": "Add your issue description, location, court preference and urgency.",
+    "uploadDocument": "Upload Document",
+    "uploadDocumentDescription": "Upload your acknowledgement or supporting document.",
+    "recommendedLawyer": "Recommended Lawyer",
+    "recommendedLawyerDescription": "AI recommends lawyers based on your issue type and location.",
+    "review": "Review",
+    "reviewDescription": "Verify all details and submit your case.",
+    "stepA11y": "Step {{step}} of {{total}}: {{title}}. {{description}}"
+  },
+  "hero": {
+    "slide1": "Your Legal Journey",
+    "slide2": "Real People. Real Lawyers.",
+    "slide3": "Focus on What Matters.",
+    "slideA11y": "Slide {{id}}"
+  },
+  "welcomeBack": "Welcome back",
+  "helloName": "Hello, {{name}}",
+  "hello": "Hello",
+  "howCanWeHelp": "How can we help with your legal matter today?",
+  "aiPowered": "AI POWERED",
+  "smartAssistant": "AI Smart Case Assistant",
+  "smartAssistantDescription": "Don't know how to post your legal case? Upload documents or record a voice note and AI will fill everything in for you.",
+  "getStarted": "Get Started",
+  "categories": "Categories",
+  "viewAll": "View All",
+  "legalAssistant": "AI Legal Assistant",
+  "legalAssistantDescription": "Get instant answers to your legal questions.",
+  "askNow": "Ask Now",
+  "howItWorksTitle": "How It Works",
+  "howItWorksTagline": "Simple. Secure. Effective."
+}

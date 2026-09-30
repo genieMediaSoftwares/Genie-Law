@@ -1,0 +1,145 @@
+{
+  "uploadFailed": "Upload failed",
+  "viewer": {
+    "accessRestricted": "Access Restricted",
+    "fileNotAvailable": "File Not Available",
+    "noPermission": "You don't have permission to access this document.",
+    "notSavedOnSubmit": "This file was not saved when the case was submitted. Ask the client to upload it again.",
+    "noLongerStored": "This file is no longer stored. Ask the person who shared it to upload it again.",
+    "cannotParseText": "Unable to parse text content.",
+    "retrieveFailed": "Failed to retrieve document file.",
+    "untitled": "Untitled Document",
+    "pdfDocument": "PDF Document",
+    "typeDocument": "{{ext}} Document",
+    "opensInPdfViewer": "Opens in your phone’s PDF viewer.",
+    "opensInApp": "Opens in an app on your phone that supports this file type.",
+    "openA11y": "Open {{name}}",
+    "opening": "Opening…",
+    "openPdf": "Open PDF",
+    "openDocument": "Open Document",
+    "retrieving": "Retrieving document securely...",
+    "previewUnavailable": "Preview Unavailable",
+    "openWithViewer": "Open this document with a compatible document viewer.",
+    "download": "Download",
+    "textFileContent": "TEXT FILE CONTENT",
+    "legalCaseDocument": "Legal Case Document ({{ext}})",
+    "summary": "Document Summary",
+    "filename": "• Filename: {{value}}",
+    "type": "• Type: {{value}}",
+    "size": "• Size: {{value}}",
+    "openFullWindow": "Open in Full Window",
+    "downloadA11y": "Download document"
+  },
+  "relevance": {
+    "verificationFailed": "Document verification failed. Please try again.",
+    "notRelevant": "This document does not appear to be related to your case. Please upload a relevant case document such as an FIR, agreement, notice, court order, or other document related to your case.",
+    "noRelevantDocument": "Please upload at least one relevant document to continue.",
+    "relevantLabel": "Relevant to your case · {{type}}",
+    "alertTitle": "Document Not Relevant",
+    "remove": "Remove",
+    "chooseAnother": "Choose Another Document",
+    "verified": "Document verified"
+  },
+  "size": {
+    "tooLargeTitle": "File Too Large",
+    "tooLargeMessage": "Files above 10 MB are not acceptable. Please choose a file that is 10 MB or smaller.",
+    "chooseAnotherFile": "Choose Another File"
+  },
+  "files": {
+    "overLimitRemove": "{{name}} is {{size}}, over the {{limit}} limit. Remove it and add it again so it can be optimized.",
+    "overLimitReduce": "{{name}} is {{size}}, over the {{limit}} limit. Please reduce or compress it and try again.",
+    "oldDoc": "{{name}} is an older .doc file, which cannot be read. Please save it as PDF or .docx.",
+    "unsupported": "{{name}} is not a supported file type.",
+    "tooLargeToOptimize": "{{name}}: This file is too large to optimize. Maximum optimization input is {{limit}}.",
+    "cannotReduce": "{{name}}: This file could not be safely reduced below {{limit}}.",
+    "optimizeSendFailed": "{{name}}: The file could not be sent for optimization. {{message}}",
+    "optimizeUnavailable": "{{name}}: File optimization is not available on the server yet.",
+    "optimizeServerFailed": "{{name}}: The server could not optimize this file. Please try again.",
+    "withMessage": "{{name}}: {{message}}",
+    "compressFailed": "{{name}} could not be compressed: {{message}}",
+    "bestResult": " The best result was {{size}}.",
+    "wordCannotReduce": " Word documents cannot be reduced without changing them. Save it as a PDF and add that instead.",
+    "textCannotReduce": " Text files are never altered. Split it into smaller files.",
+    "optimizedSummary": "File optimized successfully · Original: {{original}} · Optimized: {{optimized}}",
+    "checking": "Checking {{name}}...",
+    "optimizing": "Optimizing {{name}}...",
+    "optimizingProgress": "Optimizing {{index}} of {{total}} files · {{action}}",
+    "cannotOpenInApp": "This document cannot be opened in the app.",
+    "noAppToOpen": "No app on this device can open this document.",
+    "openOnlyNative": "Opening in another app is only available on iOS and Android.",
+    "chooseToUpload": "Choose documents to upload",
+    "imageUnreadable": "This image could not be read.",
+    "imageNotCompressed": "This image could not be compressed."
+  },
+  "voice": {
+    "noRecording": "No recording in progress.",
+    "saveFailed": "The recording could not be saved. Please try again.",
+    "browserUnsupported": "This browser cannot record audio.",
+    "notRecording": "Not recording."
+  },
+  "upload": {
+    "selectFailed": "Failed to select file.",
+    "uploadFailed": "Failed to upload document.",
+    "title": "Upload Document",
+    "closeA11y": "Close modal",
+    "tapA11y": "Tap to upload document",
+    "tap": "Tap to upload",
+    "formats": "PDF, DOCX, JPG, PNG, TXT (Max size 10 MB)",
+    "uploading": "Uploading...",
+    "uploadNow": "Upload Now",
+    "or": "or",
+    "gallery": "Choose from Gallery",
+    "chooseFile": "Choose a File",
+    "scan": "Scan Document"
+  },
+  "rename": {
+    "invalid": "Please enter a valid document name.",
+    "failed": "Failed to rename document.",
+    "title": "Rename Document",
+    "filename": "Filename",
+    "placeholder": "Enter new filename",
+    "save": "Save"
+  },
+  "actions": {
+    "view": "View",
+    "rename": "Rename",
+    "replace": "Replace",
+    "download": "Download",
+    "share": "Share",
+    "delete": "Delete",
+    "options": "Document options"
+  },
+  "empty": {
+    "noMatches": "No matching documents",
+    "none": "No documents yet",
+    "noMatchesHint": "Try selecting another file type or clearing your search filter.",
+    "noneHint": "Upload your legal documents to keep them organized and accessible anytime, anywhere."
+  },
+  "delete": {
+    "thisDocument": "this document",
+    "failed": "Failed to delete document.",
+    "title": "Delete Document",
+    "confirm": "Are you sure you want to delete \"{{name}}\"? This action cannot be undone."
+  },
+  "loadError": {
+    "title": "Failed to load documents",
+    "hint": "Please check your internet connection and try again.",
+    "tryAgain": "Try Again"
+  },
+  "unknownSize": "Unknown size",
+  "filters": {
+    "all": "All",
+    "pdf": "PDF",
+    "docx": "DOCX",
+    "images": "Images",
+    "txt": "TXT"
+  },
+  "screen": {
+    "noPermission": "You don't have permission to access this document.",
+    "downloadFailed": "Failed to download document.",
+    "shareMessage": "View document: {{name}}\n{{url}}",
+    "title": "My Documents",
+    "uploadA11y": "Upload document",
+    "searchPlaceholder": "Search documents..."
+  }
+}

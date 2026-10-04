@@ -78,7 +78,7 @@ export const GenieHeader: React.FC<GenieHeaderProps> = ({
         {right}
         {onNotifications ? (
           <GenieIconButton
-            icon={<BellIcon size={20} color={colors.gold} />}
+            icon={<BellIcon size={20} color={colors.white} />}
             onPress={onNotifications}
             accessibilityLabel={i18n.t('common:nav.notifications')}
             badgeCount={notificationCount}

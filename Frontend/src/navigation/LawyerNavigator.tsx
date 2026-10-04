@@ -75,6 +75,7 @@ import type {
 
 import { useT } from '../i18n/useT';
 import { screenLayout } from './screenLayout';
+import { useActiveRouteName } from './useActiveRouteName';
 import { useRealtimeLive } from '../realtime/realtimeSession';
 
 const shared = <P,>(screen: React.ComponentType<P>) =>
@@ -108,6 +109,38 @@ const LawyerTabs: React.FC = () => (
   </Tab.Navigator>
 );
 
+// Drawer item to highlight for each screen (detail screens light up their section).
+const LAWYER_DRAWER_KEY_BY_ROUTE: Record<string, string> = {
+  Workspace: 'workspace',
+  Research: 'workspace',
+  ResearchCases: 'workspace',
+  ResearchDocuments: 'workspace',
+  ResearchSession: 'workspace',
+  Notes: 'workspace',
+  Dashboard: 'dashboard',
+  Leads: 'leads',
+  LeadDetails: 'leads',
+  Clients: 'clients',
+  Calendar: 'calendar',
+  Documents: 'documents',
+  Payments: 'payments',
+  PaymentDetails: 'payments',
+  Hearings: 'hearings',
+  Messages: 'messages',
+  Chat: 'messages',
+  Notifications: 'notifications',
+  Subscription: 'subscription',
+  Checkout: 'subscription',
+  LawyerProfile: 'profile',
+  LawyerMyProfile: 'profile',
+  LawyerReviews: 'profile',
+  Settings: 'settings',
+  ChangePassword: 'settings',
+  AboutUs: 'settings',
+  PrivacyPolicy: 'settings',
+  TermsConditions: 'settings',
+};
+
 const LawyerOverlays: React.FC = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<LawyerStackParamList>>();
@@ -117,6 +150,7 @@ const LawyerOverlays: React.FC = () => {
 
   const isDrawerOpen = useUiStore(state => state.isDrawerOpen);
   const closeDrawer = useUiStore(state => state.closeDrawer);
+  const activeRouteName = useActiveRouteName();
 
   const [isSigningOut, setIsSigningOut] = useState(false);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
@@ -315,6 +349,7 @@ const LawyerOverlays: React.FC = () => {
         isOpen={isDrawerOpen}
         onClose={closeDrawer}
         user={drawerUser}
+        activeKey={activeRouteName ? LAWYER_DRAWER_KEY_BY_ROUTE[activeRouteName] : undefined}
         items={items}
         onSignOut={handleSignOut}
         isSigningOut={isSigningOut}

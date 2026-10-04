@@ -21,7 +21,10 @@ import { colors } from '../../theme';
 import { USE_NATIVE_DRIVER } from '../../utils/platform';
 import { useT } from '../../i18n/useT';
 
-const DRAWER_WIDTH_FRACTION = 0.82;
+// 85% of the screen on phones, capped so tablets and wide windows keep a
+// sidebar-sized panel.
+const DRAWER_WIDTH_FRACTION = 0.85;
+const DRAWER_MAX_WIDTH = 400;
 
 export interface GenieDrawerItem {
   key?: string;
@@ -54,6 +57,8 @@ export interface GenieDrawerProps {
   isSigningOut?: boolean;
   onAvatarPress?: () => void;
   onSubscriptionPress?: () => void;
+  /** Key of the item for the screen currently shown; highlighted in gold. */
+  activeKey?: string;
 }
 
 const DrawerRow: React.FC<{
@@ -62,25 +67,31 @@ const DrawerRow: React.FC<{
   onPress: () => void;
   disabled?: boolean;
   destructive?: boolean;
+  active?: boolean;
   badge?: string | number;
-}> = ({ label, icon, onPress, disabled = false, destructive = false, badge }) => (
+}> = ({ label, icon, onPress, disabled = false, destructive = false, active = false, badge }) => (
   <Pressable
     onPress={onPress}
     disabled={disabled}
     accessibilityRole="button"
     accessibilityLabel={label}
-    accessibilityState={{ disabled }}
+    accessibilityState={{ disabled, selected: active }}
     className={[
-      'h-12 flex-row items-center gap-3 rounded-control px-3',
+      'min-h-12 flex-row items-center gap-3.5 rounded-control px-3 py-2.5',
+      active ? 'bg-gold-wash' : 'active:bg-surface-secondary',
       disabled ? 'opacity-50' : '',
     ].join(' ')}
   >
+    {active ? (
+      <View className="absolute bottom-2.5 left-0 top-2.5 w-1 rounded-full bg-gold" />
+    ) : null}
+
     <View className="w-6 items-center justify-center">{icon}</View>
 
     <GenieText
       variant="body-lg"
-      tone={destructive ? 'error' : disabled ? 'muted' : 'primary'}
-      className="flex-1"
+      tone={destructive ? 'error' : active ? 'gold' : disabled ? 'muted' : 'primary'}
+      className={['flex-1', active ? 'font-semibold' : ''].join(' ')}
       numberOfLines={1}
     >
       {label}
@@ -96,7 +107,7 @@ const DrawerRow: React.FC<{
 
     <ChevronRightIcon
       size={16}
-      color={destructive ? colors.error : colors.textMuted}
+      color={destructive ? colors.error : active ? colors.gold : colors.textMuted}
     />
   </Pressable>
 );
@@ -113,6 +124,7 @@ export const GenieDrawer: React.FC<GenieDrawerProps> = ({
   isSigningOut = false,
   onAvatarPress,
   onSubscriptionPress,
+  activeKey,
 }) => {
   const isVisible = isOpen ?? visible ?? false;
   const handleLogout = onSignOut ?? onLogout;
@@ -126,7 +138,7 @@ export const GenieDrawer: React.FC<GenieDrawerProps> = ({
       : '';
 
   const { width } = useWindowDimensions();
-  const drawerWidth = width * DRAWER_WIDTH_FRACTION;
+  const drawerWidth = Math.min(width * DRAWER_WIDTH_FRACTION, DRAWER_MAX_WIDTH);
 
   const anim = useRef(new Animated.Value(0)).current;
 
@@ -178,11 +190,11 @@ export const GenieDrawer: React.FC<GenieDrawerProps> = ({
         </Animated.View>
 
         <Animated.View
-          style={{ transform: [{ translateX }] }}
-          className="absolute bottom-0 left-0 top-0 z-20 bg-background"
+          style={{ width: drawerWidth, transform: [{ translateX }] }}
+          className="absolute bottom-0 left-0 top-0 z-20 border-r border-border bg-background"
         >
           <SafeAreaView edges={['top', 'bottom']} className="flex-1">
-            <View className="px-4 pb-4 pt-3">
+            <View className="border-b border-border px-4 pb-5 pt-2">
               <View className="flex-row items-center justify-end gap-1">
                 {onSubscriptionPress ? (
                   <Pressable
@@ -207,7 +219,7 @@ export const GenieDrawer: React.FC<GenieDrawerProps> = ({
                 </Pressable>
               </View>
 
-              <View className="mt-3 flex-row items-center gap-3">
+              <View className="mt-1 flex-row items-center gap-4">
                 <Pressable
                   onPress={() => {
                     if (onAvatarPress) {
@@ -223,7 +235,7 @@ export const GenieDrawer: React.FC<GenieDrawerProps> = ({
                   <GenieAvatar uri={user?.profileImage || user?.avatar} name={userName} size="profile" />
                 </Pressable>
 
-                <View className="flex-1">
+                <View className="min-w-0 flex-1">
                   {userName ? (
                     <View className="flex-row items-center gap-1.5">
                       <GenieText variant="body-lg" className="flex-shrink font-semibold" numberOfLines={1}>
@@ -250,25 +262,25 @@ export const GenieDrawer: React.FC<GenieDrawerProps> = ({
 
             <ScrollView
               className="flex-1"
-              contentContainerClassName="px-4 py-1"
+              contentContainerClassName="gap-1 px-3 py-3"
               showsVerticalScrollIndicator={false}
             >
               {menuItems.map(item => {
                 const IconComp = item.Icon;
                 const isAvailable = item.available !== false;
+                const isActive = activeKey !== undefined && (item.key ?? item.id) === activeKey;
+                const iconColor = !isAvailable ? colors.textMuted : isActive ? colors.gold : colors.white;
 
                 return (
                   <DrawerRow
                     key={item.key ?? item.id ?? item.label}
                     label={item.label}
                     disabled={!isAvailable}
+                    active={isActive}
                     badge={item.badge}
                     icon={
                       IconComp ? (
-                        <IconComp
-                          size={20}
-                          color={isAvailable ? colors.white : colors.textMuted}
-                        />
+                        <IconComp size={20} color={iconColor} />
                       ) : (
                         item.icon ?? null
                       )
@@ -284,10 +296,11 @@ export const GenieDrawer: React.FC<GenieDrawerProps> = ({
               })}
             </ScrollView>
 
-            <View className="shrink-0 px-4 pb-2">
+            <View className="shrink-0 gap-1 border-t border-border px-3 pb-2 pt-2">
               <DrawerRow
                 label={t('common:nav.settings')}
-                icon={<SettingsIcon size={20} color={colors.white} />}
+                active={activeKey === 'settings'}
+                icon={<SettingsIcon size={20} color={activeKey === 'settings' ? colors.gold : colors.white} />}
                 onPress={handleSettings}
               />
 

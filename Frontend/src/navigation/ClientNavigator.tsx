@@ -69,6 +69,7 @@ import type {
 
 import { useT } from '../i18n/useT';
 import { screenLayout } from './screenLayout';
+import { useActiveRouteName } from './useActiveRouteName';
 
 const Tab = createBottomTabNavigator<ClientTabParamList>();
 const Stack = createNativeStackNavigator<ClientStackParamList>();
@@ -98,6 +99,35 @@ const ClientTabs: React.FC = () => {
   );
 };
 
+// Drawer item to highlight for each screen (detail screens light up their section).
+const CLIENT_DRAWER_KEY_BY_ROUTE: Record<string, string> = {
+  Home: 'dashboard',
+  Cases: 'cases',
+  CaseDetails: 'cases',
+  PostCase: 'cases',
+  Advocates: 'advocates',
+  AdvocateProfile: 'advocates',
+  AllCategories: 'advocates',
+  Messages: 'messages',
+  Chat: 'messages',
+  Documents: 'documents',
+  Favorites: 'favorites',
+  Payments: 'payments',
+  PaymentDetails: 'payments',
+  Reviews: 'reviews',
+  Disputes: 'disputes',
+  UrgentHelp: 'urgent',
+  Profile: 'profile',
+  MyProfileDetail: 'profile',
+  PersonalInformation: 'profile',
+  Notifications: 'notifications',
+  Settings: 'settings',
+  ChangePassword: 'settings',
+  AboutUs: 'settings',
+  PrivacyPolicy: 'settings',
+  TermsConditions: 'settings',
+};
+
 const ClientOverlays: React.FC = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<ClientStackParamList>>();
@@ -107,6 +137,7 @@ const ClientOverlays: React.FC = () => {
 
   const isDrawerOpen = useUiStore(state => state.isDrawerOpen);
   const closeDrawer = useUiStore(state => state.closeDrawer);
+  const activeRouteName = useActiveRouteName();
   const isCreateSheetOpen = useUiStore(state => state.isCreateSheetOpen);
   const closeCreateSheet = useUiStore(state => state.closeCreateSheet);
 
@@ -259,6 +290,7 @@ const ClientOverlays: React.FC = () => {
         isOpen={isDrawerOpen}
         onClose={closeDrawer}
         user={user}
+        activeKey={activeRouteName ? CLIENT_DRAWER_KEY_BY_ROUTE[activeRouteName] : undefined}
         items={items}
         onSignOut={handleSignOut}
         isSigningOut={isSigningOut}

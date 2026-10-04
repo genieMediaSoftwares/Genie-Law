@@ -32,10 +32,17 @@ function handleUploadErrors(uploadMiddleware, overrides = {}) {
         });
       }
 
-      return res.status(415).json({
-        success: false,
-        message: err.message || "Unsupported file type.",
-      });
+      // File-type rejections from the upload filter carry their own status.
+      if (err.isOperational) {
+        return res.status(err.statusCode).json({
+          success: false,
+          message: err.message,
+          code: err.code,
+        });
+      }
+
+      // Anything else (e.g. the file store failing to save) is a server error.
+      return next(err);
     });
   };
 }

@@ -50,18 +50,12 @@ const STARTUP_REQUIRED = [
   "JWT_REFRESH_EXPIRES_IN",
   "ENCRYPTION_SECRET",
   "OTP_SECRET",
-];
-
-// Feature toggles and tunables — optional, with safe defaults.
-// Read via optional() where needed; listed here for visibility only.
-const OPTIONAL_TUNABLES = [
+  "REQUEST_TIMEOUT_MS",
   "DB_AUTO_INDEX",
   "DB_POOL_MAX",
   "DB_POOL_MIN",
   "DB_MAX_IDLE_TIME_MS",
   "DB_SOCKET_TIMEOUT_MS",
-  "REQUEST_TIMEOUT_MS",
-  "AI_CONCURRENCY",
 ];
 
 // Throws one error listing every missing startup setting, including the ones
@@ -80,18 +74,10 @@ function validateStartupEnv() {
   }
 }
 
-function optionalNumber(name, fallback) {
-  const raw = read(name);
-  if (!raw) return fallback;
-  const value = Number(raw);
-  return Number.isFinite(value) ? value : fallback;
-}
-
 module.exports = {
   required,
   optional,
   requiredNumber,
-  optionalNumber,
   validateStartupEnv,
   STARTUP_REQUIRED,
 };

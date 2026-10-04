@@ -23,9 +23,22 @@ services:
         value: "1"
       - key: ALLOWED_ORIGINS
         sync: false
+      - key: REQUEST_TIMEOUT_MS
+        sync: false
 
       # MongoDB Atlas
       - key: MONGODB_URI
+        sync: false
+      # "true" on the first deploy (and after a model index change), then "false".
+      - key: DB_AUTO_INDEX
+        sync: false
+      - key: DB_POOL_MAX
+        sync: false
+      - key: DB_POOL_MIN
+        sync: false
+      - key: DB_MAX_IDLE_TIME_MS
+        sync: false
+      - key: DB_SOCKET_TIMEOUT_MS
         sync: false
 
       # Cloudflare R2 (FILE_STORAGE=local is development only and refused here)

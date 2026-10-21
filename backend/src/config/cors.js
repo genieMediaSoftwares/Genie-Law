@@ -13,6 +13,17 @@ if (configuredOrigins.includes("*")) {
   );
 }
 
+// Browsers send the full origin ("https://host"), so an entry without a scheme
+// never matches and every request from that site fails CORS. Stop at boot instead.
+const malformed = configuredOrigins.filter(
+  (origin) => origin !== "*" && !/^https?:\/\/[^/]+$/.test(origin)
+);
+if (malformed.length) {
+  throw new Error(
+    `ALLOWED_ORIGINS entries must look like https://host or http://host:port (got: ${malformed.join(", ")}).`
+  );
+}
+
 const allowedOrigins = new Set(configuredOrigins.filter((origin) => origin !== "*"));
 
 // ALLOWED_ORIGINS is the only list of browser origins that may call the API
